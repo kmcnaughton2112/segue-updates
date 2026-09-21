@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download segue</title>
+<meta name="description" content="Download the latest segue for macOS.">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d0d0d;
+    --card: #141414;
+    --line: #242428;
+    --green: #00ef7a;
+    --teal: #3ec9c9;
+    --text: #e8e8e8;
+    --body: #c9c9c9;
+    --dim: #8080a0;
+    --foot: #666;
+  }
+  * { box-sizing: border-box; }
+  html { background: var(--bg); }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--body);
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 560px; margin: 0 auto; padding: 48px 16px 40px; }
+  .logo { display: block; margin: 0 auto 28px; width: 200px; max-width: 60%; height: auto; }
+  .kicker {
+    font-family: 'DM Mono', 'Courier New', monospace;
+    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--teal); text-align: center; margin: 0 0 8px;
+  }
+  h1 { margin: 0 0 8px; color: var(--text); font-size: 30px; line-height: 1.2; font-weight: 600; text-align: center; }
+  .lede { margin: 0 0 28px; text-align: center; }
+  .downloads { display: grid; gap: 12px; margin-bottom: 14px; }
+  .dl {
+    display: block; text-decoration: none;
+    background: var(--green); color: #0d0d0d;
+    border-radius: 8px; padding: 16px 20px;
+    font-weight: 600; font-size: 17px; line-height: 1.3;
+  }
+  .dl small {
+    display: block; margin-top: 2px;
+    font-family: 'DM Mono', 'Courier New', monospace;
+    font-weight: 400; font-size: 12.5px; color: #0d0d0d; opacity: 0.75;
+  }
+  .dl:hover { filter: brightness(1.08); }
+  .dl:focus-visible, .ghost:focus-visible, a:focus-visible { outline: 2px solid var(--teal); outline-offset: 3px; }
+  .hint { font-size: 14px; color: var(--dim); margin: 0 0 32px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 20px 22px; margin-bottom: 16px; }
+  h2 {
+    margin: 0 0 10px; font-family: 'DM Mono', 'Courier New', monospace; font-weight: 500;
+    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal);
+  }
+  ol { margin: 0; padding-left: 20px; }
+  li { margin: 4px 0; }
+  p { margin: 0 0 10px; }
+  p:last-child { margin-bottom: 0; }
+  .ghost {
+    display: inline-block; margin-top: 4px; text-decoration: none;
+    border: 1px solid var(--green); color: var(--green);
+    border-radius: 8px; padding: 10px 16px; font-weight: 600; font-size: 15px;
+  }
+  .ghost:hover { background: rgba(0, 239, 122, 0.08); }
+  a { color: var(--teal); }
+  footer { margin-top: 28px; text-align: center; font-size: 13px; color: var(--foot); }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="segue-logo.png" alt="segue">
+  <p class="kicker">Release <span id="ver">1.2.3</span></p>
+  <h1>Download segue</h1>
+  <p class="lede">The latest version, for macOS.</p>
+
+  <div class="downloads">
+    <a class="dl" id="dl-arm" href="https://github.com/kmcnaughton2112/segue-updates/releases/download/v1.2.3/segue-1.2.3-Apple-Silicon.dmg">
+      Download for Apple Silicon
+      <small>Macs with an M-series chip &middot; <span id="size-arm">111 MB</span></small>
+    </a>
+    <a class="dl" id="dl-intel" href="https://github.com/kmcnaughton2112/segue-updates/releases/download/v1.2.3/segue-1.2.3-Intel.dmg">
+      Download for Intel
+      <small>Older Intel Macs &middot; <span id="size-intel">119 MB</span></small>
+    </a>
+  </div>
+  <p class="hint">Not sure which one? Open the Apple menu and choose About This Mac. If it says Apple M1, M2, M3 or M4, choose Apple Silicon. If it says Intel, choose Intel.</p>
+
+  <div class="card">
+    <h2>What to do next</h2>
+    <ol>
+      <li>Download the build for your Mac.</li>
+      <li>Open the DMG and drag segue to Applications.</li>
+      <li>Launch segue.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>Updating</h2>
+    <p>Your existing license key keeps working. There is nothing to reactivate.</p>
+  </div>
+
+  <div class="card">
+    <h2>New to segue</h2>
+    <p>Start a free 30-day trial to get a license key. No credit card required.</p>
+    <a class="ghost" href="https://segue.live/?trial=1">Start 30-Day Free Trial</a>
+  </div>
+
+  <footer>Questions or issues: <a href="mailto:segueapp.io@gmail.com">segueapp.io@gmail.com</a></footer>
+</main>
+
+<script>
+  // The buttons above already point at the current release. This looks up the
+  // newest release in this same repo and points them at that instead, so a new
+  // version only needs its files uploaded here, not this page edited. If the
+  // lookup fails for any reason, the buttons above are left as they are.
+  (function () {
+    var REPO = 'https://github.com/kmcnaughton2112/segue-updates/';
+    fetch('https://api.github.com/repos/kmcnaughton2112/segue-updates/releases/latest', {
+      headers: { Accept: 'application/vnd.github+json' }
+    }).then(function (r) { return r.ok ? r.json() : null; }).then(function (rel) {
+      if (!rel || !rel.assets) return;
+      var version = String(rel.tag_name || '').replace(/^v/, '');
+      if (!/^\d+(\.\d+){1,3}$/.test(version)) return;
+      var arm = null, intel = null;
+      rel.assets.forEach(function (a) {
+        var ok = a && a.browser_download_url && a.browser_download_url.indexOf(REPO) === 0;
+        if (ok && /-Apple-Silicon\.dmg$/.test(a.name)) arm = a;
+        if (ok && /-Intel\.dmg$/.test(a.name)) intel = a;
+      });
+      if (!arm || !intel) return;
+      document.getElementById('dl-arm').href = arm.browser_download_url;
+      document.getElementById('dl-intel').href = intel.browser_download_url;
+      document.getElementById('size-arm').textContent = Math.round(arm.size / 1e6) + ' MB';
+      document.getElementById('size-intel').textContent = Math.round(intel.size / 1e6) + ' MB';
+      document.getElementById('ver').textContent = version;
+    }).catch(function () {});
+  })();
+</script>
+</body>
+</html>
